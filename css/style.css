@@ -1,0 +1,271 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a191f;
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    height: 60px;
+}
+
+.header_logo {
+    font-size: 32px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header_search {
+    padding: 8px;
+    border: 2px solid #1a191f;
+    outline: none;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie {
+    width: 240px;
+    margin: 10px;
+    position: relative;
+}
+
+.movie_cover-inner {
+    position: relative;
+    height: 360px;
+}
+
+.movie_cover {
+    max-width: 100%;
+    height: 100%;
+}
+
+.movie_cover--darkened {
+    background-color: #000000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.movie_cover--darkened:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.movie_info {
+    padding: 10px 0px;
+}
+
+.movie_title {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.movie_category {
+    font-size: 14px;
+    color: #ffd80e;
+}
+
+.movie_average {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 0px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a191f;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.movie_average--green {
+    border: 1px solid green;
+}
+
+.movie_average--orange {
+    border: 1px solid orange;
+}
+
+.movie_average--red {
+    border: 1px solid red;
+}
+.nichego_ne_naideno {
+    color: #838288;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.nichego_ne_naideno--img {
+    background: rgba(39,62,84,0.82);
+}
+
+.pereklyuchatel-stranits i {
+    font-style: normal;
+    font-weight: bold;
+  }
+  .pereklyuchatel-stranits {
+    list-style: none;
+    margin: 8px;
+    padding: 0;
+    display: flex;
+    justify-content: center;  
+  }
+  .pereklyuchatel-stranits a {
+    text-decoration: none;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin: 0 5px;
+    font-size: 25px;
+    overflow: hidden;
+    position: relative;
+    color: #2475bb;
+    border: 2px solid #2790ea;
+    transition: all 0.2s linear 0s;
+  }
+  .pereklyuchatel-stranits a:after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 90%;
+    top: -110%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color: #337AB7;
+    border-radius: 100%;
+  }
+  .pereklyuchatel-stranits a i,
+  .pereklyuchatel-stranits a img {
+    position: relative;
+    z-index: 1;
+  }
+  .pereklyuchatel-stranits a img {
+    width: 25px;
+    height: 25px;
+  }
+  .pereklyuchatel-stranits a:hover {
+    color: #fcfdfd;
+  }
+  .pereklyuchatel-stranits a:hover:after {
+    top: 5%;
+    transition: all 0.2s linear 0s;
+  }
+
+  .spin-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+    .spinner{
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      border: 3px solid transparent;
+      border-top-color: #A04668;
+      top: 50%;
+      left: 50%;
+      margin: -30px;
+      border-radius: 50%;
+      animation: spin 2s linear infinite;
+    }
+      
+      .spinner:before, .spinner:after{
+        content:'';
+        position: absolute;
+        border: 3px solid transparent;
+        border-radius: 50%;
+      }
+      
+      .spinner:before{
+        border-top-color: #254E70;
+        top: -12px;
+        left: -12px;
+        right: -12px;
+        bottom: -12px;
+        animation: spin 3s linear infinite;
+      }
+      
+      .spinner:after{
+        border-top-color: #FFFBFE;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;  
+        animation: spin 4s linear infinite;
+      }
+      .movies_info--top--left{
+          height:500px;
+      }
+      .movies_info--top--right{
+        padding-left: 20px;
+    }
+      .movies_info{
+        display:none;
+          margin-top:5%;
+          margin-left:15%;
+      }
+      .movies_info--top {
+        display: flex;
+      }
+      .info-left {
+        font-family: Trattatello, fantasy;
+        font-style: italic;
+        color: #747070;
+      }
+      .info-right {
+          color: #ffffff;
+          padding-left:20px;
+      }
+     .back-to {
+       background-color: #1a191f00;
+       margin-top: 5%;
+       margin-left: 80%;
+    width: 100px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    overflow: hidden;
+    color: #2475bb;
+    border: 2px solid #2790ea;
+    transition: all 0.2s linear 0s;
+     }
+    .back-to :hover {
+      color: #fcfdfd;
+    }
+  
+  @keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
